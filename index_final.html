@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Pierre B. and Gwendélina P.">
+    <title>Bootstrap tuto</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="./CSS/carousel.css">
+  </head>
+
+<body>
+
+<header>
+
+<!--  Navbar -->
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #7D5BA6;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Présentation Bootstrap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mise en production Azure</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-secondary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+<main>
+
+<!-- Caroussel --> 
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <!-- carousel-indicators : 3 boutons du bas -->
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button"  data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- carousel-inner : bloc slides -->
+    <div class="carousel-inner">
+
+      <!-- carousel-item : slide /active : slide visible à l'affichage de la page -->
+      <div class="carousel-item active ">
+        <!-- svg = image vectorisée (optimise la qualité) / rect = taille du rectangle -->
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#F0F6F6"/></svg>
+        <div class="container">
+          <!-- text-start : positionne le texte à gauche -->
+          <div class="carousel-caption text-start" style = "color:#3B404B">
+            <h1>Qu'est-ce que Bootstrap ?</h1>
+            <p>C'est un framework CSS opensource qui permet de créer des pages responsives pour sites et applications web. 
+            Il est composé d'une collection d'outils qui contient des codes HTML et CSS, des formulaires, boutons, outils de navigation et autres éléments interactifs.</p>
+            <!-- btn = bouton actif vers lien -->
+            <p><a class="btn btn-lg" style="background-color: #7D5BA6" bg-secondary href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Pour plus de détails</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <div class="container">
+          <!-- carousel-caption: par défaut, positionne le texte au centre -->
+          <div class="carousel-caption">
+            <h1>Le caroussel.</h1>
+            <p>Est similaire à une diaporama (slidershow). Il permet de mettre facilement du contenu de type image et texte en avant en changeant dynamiquement l'image d'en tête.</p>
+            <p><a class="btn btn-lg" style="background-color: #7D5BA6;" href="https://getbootstrap.com/docs/5.1/components/carousel/">En savoir plus</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>>
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <!-- text-end : positionne le texte à droite -->
+            <h1>Le container.</h1>
+            <p> Il permet de centrer votre contenu à l’écran en y ajoutant des marges horizontales automatiques.<br>
+                Il en existe 3 différents avec Boostrap (container, container-fluid et container-{breakpoint})
+             </p>
+            <p><a class="btn btn-lg" style="background-color: #7D5BA6;" btn-primary href="https://getbootstrap.com/docs/5.0/layout/containers/">Pour plus de détails</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- carousel-control-prev : flèches directionnelles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  
+<!-- Bloc explication "Layout" -->
+
+  <!-- marketing renvoie à la classe css qui ajoute une marge au container prédéfini de Bootstrap -->
+  <div class="container marketing"> 
+    
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+
+      <div class="col-lg-4">
+        <img class="image_grid" src="https://user.oc-static.com/upload/2021/11/05/16361067677715_p2c2-1.jpg" height = 150 width = 200 alt = 'grille'>
+        <h2>La grille</h2>
+        <p>C'est un ensemble de lignes horizontales et verticales qui se croisent – les premières définissant les rangées, et les secondes les colonnes.</p>
+        <p><a class="btn btn-secondary" href="https://user.oc-static.com/upload/2021/11/05/16361067677715_p2c2-1.jpg">View details &raquo;</a></p>
+      </div>
+
+      <div class="col-lg-4">
+        <img class="image_columns" src="https://sdz-upload.s3.amazonaws.com/prod/upload/bs31.jpg" height = 150 width = 200 alt = 'column'>
+        <h2>Les colonnes</h2>
+        <p>Elles fonctionnent toujours au nombre de 12. </p>
+        <p><a class="btn btn-secondary" href="https://sdz-upload.s3.amazonaws.com/prod/upload/bs31.jpg">View details &raquo;</a></p>
+      </div>
+
+      <div class="col-lg-4">
+        <img class="image_gutter" src="./images/gutter_2.png" height = 150 width = 200 alt = 'gutter'>
+        <h2>Les gutters</h2>
+        <p>Permet de gérer de façon responsive les espaces entre les colonnes.</p>
+        <p><a class="btn btn-secondary" href="https://zellwk.com/images/2016/building-grid-systems/pattern-1side-margin.png">View details &raquo;</a></p>
+      </div>
+    </div>
+
+
+    <!-- START THE FEATURETTES -->
+
+    <!-- hr = traits -->
+    <hr class="featurette-divider">
+
+    <div class="row featurette d-flex align-items-center">
+      <div class="col-md-5">
+        <h2 class="featurette-heading" >Breakpoints <span class="text-muted d-flex align-items-center">Syntaxe et dimension</span></h2>
+        <p class="lead">Il y a six breakpoints par défaut disponibles.</p>
+      </div>
+      <div class="col-md-7">
+      <img class = "image_grid img-fluid" src="./images/grid_size.jpg" alt = "grid_size" width=100% height=80%>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Les composants<span class="text-muted"></span></h2>
+        <p class="lead">Fournit des classes précodées pour chaque composant de la page : boutons, navbar, caroussel...</p>
+      </div>
+      <div class="col-md-5">
+        <img class = "image_grid img-fluid" src="https://miro.medium.com/max/690/1*wqJlA6-QlF2upfem6ZgF8A.jpeg" alt = "grid_size" width=100% height=80%>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+
+<!-- Input / API -->
+
+    <div class="container"></div>
+      <div class="row justify-content-center"></div>
+        <div class="col-12 col-sm-6"></div>
+          <h1>API</h1>
+
+          <form>
+
+            <!-- Le contact_id -->
+            <div class="mb-3">
+              <label for="contact_id" class="form-label"><strong>Quel est votre numéro ID ?</strong></label>
+              <input type="number" class="form-control" name = "contact_id" id ="contact"></br>
+              <button type = 'submit' class = 'btn btn-info btn-block'>Entrer</button></br></br>
+            <div>
+              <p>Votre contact_id est :</p><p id = "id"></p></div></br>
+          
+            <!-- L'âge -->
+            <div class="mb-3">
+              <label for="future_age" class="form-label"><strong>Quel est votre âge ?</strong></label>
+              <input type="number" class="form-control" name = "future_age" id ="age_2"></br>
+            <div>
+              <p>Dans 10 ans, vous aurez : </p><p id = "age"></p></div></br>
+            
+          </form>
+
+          
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+
+</main>
+
+<!-- SCRIPTS : sont à indiquer juste avant la fin du body car si problème avec fichier .js = le code html/css s'affichera quand même-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+
+     <script src="./JS/api.js"></script>
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script> -->
+
+  </body>
+</html>
